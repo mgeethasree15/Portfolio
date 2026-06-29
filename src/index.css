@@ -1,0 +1,62 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #030B1A;
+  color: #E0F2FF;
+  font-family: 'Inter', sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection {
+  background-color: #06B6D4;
+  color: #030B1A;
+}
+
+a:focus-visible,
+button:focus-visible,
+[tabindex]:focus-visible {
+  outline: 2px solid #06B6D4;
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+.grid-canvas {
+  background-image: radial-gradient(circle, #0D2540 1px, transparent 1px);
+  background-size: 22px 22px;
+}
+
+.rail-track {
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+}
+.rail-track > * {
+  scroll-snap-align: start;
+}
+.rail-track::-webkit-scrollbar {
+  height: 6px;
+}
+.rail-track::-webkit-scrollbar-thumb {
+  background-color: #0D2540;
+  border-radius: 4px;
+}
+.rail-track::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+.tabular {
+  font-variant-numeric: tabular-nums;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
