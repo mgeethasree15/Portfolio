@@ -10,7 +10,7 @@ export const profile = {
   location: 'USA',
   summary:
     "Results-driven Data Analyst with 4+ years of experience in financial services, technology, and manufacturing — building scalable data pipelines, delivering actionable insights, and turning complex data into decisions that move the business forward.",
-  photo:'/IMG_6245.JPG',
+  photo: import.meta.env.BASE_URL + 'IMG_6245.JPG',
   funLine: "If life gives you lemons, what are you gonna do with it?",
 }
 
